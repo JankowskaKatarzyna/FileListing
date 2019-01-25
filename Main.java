@@ -14,7 +14,7 @@ public class Main {
         printFilesSimple("C:\\");
         printFilesDetails("C:\\");
         printFiles("C:\\", ".txt");
-        printTree("E:\\Kasia_MWO\\JAVA_2\\Skynet");
+        printTree("C:\\");
     }
 
     public static void printFilesSimple(String path) {
@@ -78,7 +78,7 @@ public class Main {
         File fileName = new File(path);
         File[] listOfFiles = fileName.listFiles();
         for (File file : listOfFiles) {
-            if (file.isDirectory()&& file.listFiles()!=null) {
+            if (file.isDirectory() && file.listFiles() != null) {
                 printTree(file.getPath());
             } else {
                 System.out.println(file.getPath());
